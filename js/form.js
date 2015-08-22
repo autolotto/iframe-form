@@ -1,6 +1,7 @@
 (function($) {
   $(document).ready(function() {
     $(".signupForm").submit(function(event) {
+      console.log('submit')
       var formData = {
         'phoneNumber': $('input[name=phoneNumber]').val()
       }
