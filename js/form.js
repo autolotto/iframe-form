@@ -13,7 +13,7 @@
         crossDomain: true,
         encode: true
       }).done(function() {
-        window.parent.location.href = "/confirmation";
+        window.parent.location.href = "http://a6n2jd5.autolotto.com/confirmation";
       });
 
       event.preventDefault();
