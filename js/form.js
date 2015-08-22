@@ -15,7 +15,7 @@
       }).done(function() {
         window.parent.location.href = "http://a6n2jd5.autolotto.com/confirmation";
       }).fail(function() {
-        alert('Please enter a valid phone number!');
+        alert('Please enter a valid US phone number!');
       });
 
       event.preventDefault();
