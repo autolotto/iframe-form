@@ -17,7 +17,7 @@
       });
 
       event.preventDefault();
-      window.location.href = "http://a6n2jd5.autolotto.com/confirmation/";
+      window.parent.location.href = "http://a6n2jd5.autolotto.com/confirmation/";
     });
   });
 })(jQuery);
