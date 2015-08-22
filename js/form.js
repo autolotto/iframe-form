@@ -13,7 +13,7 @@
         crossDomain: true,
         encode: true
       }).done(function() {
-        window.location.href = "/confirmation";
+        window.parent.location.href = "/confirmation";
       });
 
       event.preventDefault();
