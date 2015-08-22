@@ -18,7 +18,8 @@
       });
 
       event.preventDefault();
-      window.parent.location.href = "http://a6n2jd5.autolotto.com/confirmation/";
+      console.log('err')
+      // window.parent.location.href = "http://a6n2jd5.autolotto.com/confirmation/";
     });
   });
 })(jQuery);
