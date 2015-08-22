@@ -1,7 +1,6 @@
 (function($) {
   $(document).ready(function() {
     $(".signupForm").submit(function(event) {
-      console.log('submit')
       var formData = {
         'phoneNumber': $('input[name=phoneNumber]').val()
       }
@@ -15,11 +14,11 @@
         encode: true
       }).done(function() {
         window.parent.location.href = "http://a6n2jd5.autolotto.com/confirmation";
+      }).fail(function() {
+        alert('Please enter a valid phone number!');
       });
 
       event.preventDefault();
-      console.log('err')
-      // window.parent.location.href = "http://a6n2jd5.autolotto.com/confirmation/";
     });
   });
 })(jQuery);
