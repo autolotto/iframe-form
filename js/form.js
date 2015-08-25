@@ -13,7 +13,7 @@
         crossDomain: true,
         encode: true
       }).done(function() {
-        window.parent.location.href = "http://a6n2jd5.autolotto.com/confirmation";
+        window.parent.location.href = "http://autolotto.wpengine.com/confirmation/";
       }).fail(function() {
         alert('Please enter a valid US phone number!');
       });
