@@ -12,8 +12,12 @@
         dataType: 'json',
         crossDomain: true,
         encode: true
-      }).done(function() {
-        window.parent.location.href = "http://autolotto.com/confirmation/";
+      }).done(function(res) {
+        if (res.exists) {
+          window.parent.location.href = "http://autolotto.com/leaderboard/";
+        } else {
+          window.parent.location.href = "http://autolotto.com/confirmation/";
+        }
       }).fail(function() {
         alert('Please enter a valid US phone number!');
       });
