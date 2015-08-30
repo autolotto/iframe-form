@@ -13,7 +13,7 @@
         crossDomain: true,
         encode: true
       }).done(function(res) {
-        if (res.data.exists) {
+        if (res.data.registered) {
           window.parent.location.href = "http://autolotto.com/leaderboard/";
         } else {
           window.parent.location.href = "http://autolotto.com/confirmation/";
