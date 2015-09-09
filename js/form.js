@@ -7,16 +7,16 @@
 
       $.ajax({
         type: 'POST',
-        url: 'https://autolotto-backend-production.herokuapp.com/api/v1/pre/signup',
+        url: 'https://autolotto-backend-production.herokuapp.com/api/v1/pres',
         data: formData,
         dataType: 'json',
         crossDomain: true,
         encode: true
       }).done(function(res) {
-        if (res.data.exists) {
-          window.parent.location.href = "http://autolotto.com/leaderboard/";
-        } else {
+        if (res.data.created) {
           window.parent.location.href = "http://autolotto.com/confirmation/";
+        } else {
+          window.parent.location.href = "http://autolotto.com/leaderboard/";
         }
       }).fail(function() {
         alert('Please enter a valid US phone number!');
