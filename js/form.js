@@ -13,8 +13,7 @@
         crossDomain: true,
         encode: true
       }).done(function(res) {
-        var redirectTo = 'http://web.autolotto.com/giveaway/welcome';
-        window.parent.location.href = 'https://autolotto.com/redirect?url=' + redirectTo;
+        window.parent.location.href = 'http://web.autolotto.com/giveaway/welcome';
       }).fail(function() {
         alert('Please enter a valid US phone number!');
       });
