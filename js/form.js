@@ -12,7 +12,7 @@ function getQuery(q) {
     $(".signupForm").submit(function(event) {
       var formData = {
         'phoneNumber': $('input[name=phoneNumber]').val(),
-        'inviter': getQuery('i')
+        'inviteCode': getQuery('i')
       }
 
       $.ajax({
