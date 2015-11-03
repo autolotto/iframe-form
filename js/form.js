@@ -17,16 +17,16 @@ function getQuery(q) {
 
       $.ajax({
         type: 'POST',
-        url: 'https://autolotto-backend-production.herokuapp.com/api/v1/pres',
+        url: 'https://autolotto-backend-production.herokuapp.com/api/v1/users',
         data: formData,
         dataType: 'json',
         crossDomain: true,
         encode: true
       }).done(function(res) {
         if (res.data.created) {
-          window.parent.location.href = 'http://web.autolotto.com/giveaway/welcome';
+          window.parent.location.href = 'http://web.autolotto.com';
         } else {
-          window.parent.location.href = "http://autolotto.com/leaderboard/";
+          window.parent.location.href = "http://autolotto.com/me";
         }
       }).fail(function() {
         alert('Please enter a valid US phone number!');
