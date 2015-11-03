@@ -1,8 +1,18 @@
+function getQuery(q) {
+   var query = window.location.search.substring(1);
+   var vars = query.split('&');
+   for (var i=0; i < vars.length; i++) {
+     var pair = vars[i].split('=');
+     if(pair[0] == q) return pair[1];
+   }
+}
+
 (function($) {
   $(document).ready(function() {
     $(".signupForm").submit(function(event) {
       var formData = {
-        'phoneNumber': $('input[name=phoneNumber]').val()
+        'phoneNumber': $('input[name=phoneNumber]').val(),
+        'inviter': getQuery('i')
       }
 
       $.ajax({
