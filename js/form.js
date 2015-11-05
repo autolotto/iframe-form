@@ -23,11 +23,8 @@ function getQuery(q) {
         crossDomain: true,
         encode: true
       }).done(function(res) {
-        if (res.data.created) {
-          window.parent.location.href = 'http://web.autolotto.com';
-        } else {
-          window.parent.location.href = "http://autolotto.com/me";
-        }
+        var r = res.data.created ? 'http://web.autolotto.com' : 'http://web.autolotto.com/me';
+        window.parent.location.href = '/redirect?r=' + r + '&u=' + res.data.user._id;
       }).fail(function() {
         alert('Please enter a valid US phone number!');
       });
