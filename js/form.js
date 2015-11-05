@@ -23,7 +23,7 @@ function getQuery(q) {
         crossDomain: true,
         encode: true
       }).done(function(res) {
-        var r = res.data.created ? 'http://web.autolotto.com' : 'http://web.autolotto.com/me';
+        var r = res.data.created ? 'http://web.autolotto.com/giveaway/welcome' : 'http://web.autolotto.com/giveaway/home';
         window.parent.location.href = '/redirect?r=' + r + '&u=' + res.data.user._id;
       }).fail(function() {
         alert('Please enter a valid US phone number!');
